@@ -9,6 +9,7 @@ export class ServerComponent implements OnInit {
 
   username = '';
   activeButton = false;
+  displayStyle = 'visibility: hidden;';
 
   constructor() { }
 
@@ -17,6 +18,10 @@ export class ServerComponent implements OnInit {
 
   resetName(){
     this.username = '';
+    this.displayStyle = 'visibility: hidden;';
   }
 
+  onUpdateUsername(event){
+    this.displayStyle = 'visibility: visible;';
+  }
 }

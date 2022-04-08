@@ -5,9 +5,11 @@
     class="form-control"
     id="username"
     placeholder="Username"
-    [(ngModel)]="username"> <!-- Tho-Way-Binding -->
+    (input)="onUpdateUsername($event)"
+    [(ngModel)]="username"
+   > <!-- Tho-Way-Binding -->
 </div>
-<p class="text-info">{{ username }}</p> <!-- String Interpolation -->
+<p class="text-info" [style]="displayStyle">Hi {{ username }}!</p> <!-- String Interpolation -->
 <hr>
 <button
   type="button"
